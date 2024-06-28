@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button, ButtonProps } from './Button';
+
+import { Button, IButtonProps } from './Button';
 
 const buttonMeta: Meta = {
   title: 'Example/Button',
@@ -15,7 +16,7 @@ const buttonMeta: Meta = {
 export default buttonMeta;
 
 type Story = {
-  args: Partial<ButtonProps>;
+  args: Partial<IButtonProps>;
 };
 
 export const Size: Story = {

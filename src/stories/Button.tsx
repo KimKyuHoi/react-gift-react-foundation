@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export interface ButtonProps {
+export interface IButtonProps {
   size?: 'large' | 'small' | 'responsive';
 
   theme?: 'kakao' | 'outline' | 'black' | 'lightGray' | 'darkGray';
@@ -9,7 +9,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-const ButtonStyles = styled.button<ButtonProps>`
+const ButtonStyles = styled.button<IButtonProps>`
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
@@ -79,7 +79,7 @@ export const Button = ({
   theme = 'kakao',
   children,
   ...props
-}: ButtonProps) => {
+}: IButtonProps) => {
   return (
     <ButtonStyles type="button" theme={theme} size={size} {...props}>
       {children}
